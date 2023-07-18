@@ -177,6 +177,7 @@ display: inline;
 }
   #sidebar
   {
+    position: static;
     display: block;
     width: 20%;
     background-color: #FCD34D; 
