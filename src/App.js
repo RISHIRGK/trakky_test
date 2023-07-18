@@ -1,23 +1,52 @@
-import logo from './logo.svg';
-import './App.css';
+import "./App.css";
+import React from "react";
+import search from "./svgs/search.svg"
+import hamburger from "./svgs/hamburger.svg"
+import profile from "./svgs/profile_icon.svg"
+import down_arrow from "./svgs/down_arrow.svg"
+// import './input.css';
 
 function App() {
+  const [hamburger_state,change_hamburger_state]=React.useState(false);
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
+    <div id="main_root" className="">
+      <div id="main" className="  ">
+        <div id="sidebar" className={` ${hamburger_state?'sidebar_open':'sidebar_close'} `}  ></div>
+        <div
+          id="body_div"
+          className=""
         >
-          Learn React
-        </a>
-      </header>
+          <div id="header_div" className="  ">
+            <div
+              id="searchbar_div"
+             
+            >
+                <img id="search_icon" src={search} alt="hamburger_icon" ></img>
+                <input id="searchbar" type="text" placeholder="Search for something...  "></input>
+            </div>
+            
+            <div
+              id="profile_div"
+              className="  "
+            >
+              <img id="profile_img" src={profile} alt="profile" ></img>
+              <a id="profile_dropdown" href="#" className="  ">
+              <span>SOHAM</span>
+              <img id="down_arrow" src={down_arrow} alt="down_arrow"></img>
+              </a>
+            </div>
+            
+            <div id="hamburger_div" className="  ">
+              <button onClick={()=>{
+                change_hamburger_state(!hamburger_state);
+              }} >
+              <img id="hamburger_icon" src={hamburger} alt="hamburger_icon" ></img>
+              </button>
+            </div>
+          </div>
+          <div id="route_body_div" className="  "></div>
+        </div>
+      </div>
     </div>
   );
 }
