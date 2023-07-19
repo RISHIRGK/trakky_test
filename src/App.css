@@ -40,14 +40,7 @@ top:0px;
 left:-100vw;
   background-color: #FCD34D; 
 height: 100%;
-transition: all 1.5s ease-in-out;
-
-
-
-
-
-
-
+transition: translateX 1.5s ease-in-out;
 }
 .sidebar_open
 {
@@ -166,7 +159,14 @@ background-color: white;
 
 /* media query */
 @media (min-width: 768px) { 
- 
+  #sidebar
+  {
+    position: static;
+    display: block;
+    width: 17%;
+    height: 100%;
+    background-color: #FCD34D; 
+  }
   .dropdown
   {
     position: absolute; 
@@ -206,13 +206,7 @@ display: inline;
 
   border-radius: 50%;
 }
-  #sidebar
-  {
-    position: static;
-    display: block;
-    width: 17%;
-    background-color: #FCD34D; 
-  }
+  
   #header_div
   {
     display: flex; 

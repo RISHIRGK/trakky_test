@@ -12,7 +12,7 @@ function App() {
   return (
     <div id="main_root" className="">
       <div id="main" className="  ">
-        <div id="sidebar" className={` ${hamburger_state?'sidebar_open':'sidebar_close'} `}  ></div>
+        <div id="sidebar"  className={` ${hamburger_state?'sidebar_open ':''} `}  ></div>
         <div
           id="body_div"
           className=""
