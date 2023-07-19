@@ -8,6 +8,7 @@ import down_arrow from "./svgs/down_arrow.svg"
 
 function App() {
   const [hamburger_state,change_hamburger_state]=React.useState(false);
+  const [profile_dropdown,change_profile_dropdown]=React.useState(false);
   return (
     <div id="main_root" className="">
       <div id="main" className="  ">
@@ -28,12 +29,22 @@ function App() {
             <div
               id="profile_div"
               className="  "
+              onClick={()=>{ change_profile_dropdown(!profile_dropdown); }}
             >
               <img id="profile_img" src={profile} alt="profile" ></img>
               <a id="profile_dropdown" href="#" className="  ">
               <span>SOHAM</span>
               <img id="down_arrow" src={down_arrow} alt="down_arrow"></img>
               </a>
+              { profile_dropdown &&
+              <div  className="dropdown"  >
+                <div>
+                  <div>Profile</div>
+                  <div>Settings</div>
+                  <div>Logout</div>
+                </div>
+              </div>
+}
             </div>
             
             <div id="hamburger_div" className="  ">
